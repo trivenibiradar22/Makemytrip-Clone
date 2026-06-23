@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MakeMyTrip clone</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="https://imgak.mmtcdn.com/pwa_v3/pwa_hotel_assets/favicon.ico">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- ------------------ MAIN HEADER ----------------------- -->
+  <header class="main-header">
+    <div class="header-top">
+      <div class="container d-flex align-items-center gap-3">
+        <a href="#" class="logo flex-shrink-0">
+          <img src="https://promos.makemytrip.com/Growth/Images/3x/mmt_dt_header_icon_3x.png" alt="MakeMyTrip">
+        </a>
+        <div class="header-utils d-flex align-items-center gap-2 flex-shrink-0 ms-auto">
+          <a href="#" class="d-inline-flex align-items-center gap-1 text-decoration-none">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            List Your Property
+          </a>
+          <span class="divider">|</span>
+          <a href="#" class="d-inline-flex align-items-center gap-1 text-decoration-none">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            myBiz <span class="mmt-badge">NEW</span>
+          </a>
+          <span class="divider">|</span>
+          <a href="#" class="d-inline-flex align-items-center gap-1 text-decoration-none">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            My Trips
+          </a>
+          <span class="divider">|</span>
+          <a href="#" class="d-inline-flex align-items-center gap-1 text-decoration-none">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            Wishlist
+          </a>
+          <span class="divider">|</span>
+          <a href="#" class="login-btn d-inline-flex align-items-center gap-1 text-decoration-none">Login or Create Account</a>
+          <span class="divider">|</span>
+          <div class="lang-curr-wrap">
+            <div class="lang-curr d-inline-flex align-items-center gap-1">
+              <span>INR</span>
+              <span>|</span>
+              <span>English</span>
+              <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="lang-curr-dropdown">
+              <div class="sel-box" data-type="country">
+                <div class="sel-box-header">
+                  <div class="sel-box-left">
+                    <svg class="flag-icon" viewBox="0 0 60 40">
+                      <rect y="0" width="60" height="13.33" fill="#FF9933"/>
+                      <rect y="13.33" width="60" height="13.33" fill="#fff"/>
+                      <rect y="26.66" width="60" height="13.34" fill="#138808"/>
+                      <circle cx="30" cy="20" r="5.5" fill="none" stroke="#000080" stroke-width="0.8"/>
+                      <circle cx="30" cy="20" r="1.2" fill="#000080"/>
+                      <line x1="30" y1="15.5" x2="30" y2="24.5" stroke="#000080" stroke-width="0.5"/>
+                      <line x1="25.5" y1="20" x2="34.5" y2="20" stroke="#000080" stroke-width="0.5"/>
+                      <line x1="26.8" y1="16.8" x2="33.2" y2="23.2" stroke="#000080" stroke-width="0.5"/>
+                      <line x1="33.2" y1="16.8" x2="26.8" y2="23.2" stroke="#000080" stroke-width="0.5"/>
+                    </svg>
+                    <span class="sel-value">India</span>
+                  </div>
+                  <svg class="sel-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                </div>
+                <div class="sel-options">
+                  <div class="sel-option selected" data-value="India"><svg class="flag-icon" viewBox="0 0 60 40"><rect y="0" width="60" height="13.33" fill="#FF9933"/><rect y="13.33" width="60" height="13.33" fill="#fff"/><rect y="26.66" width="60" height="13.34" fill="#138808"/><circle cx="30" cy="20" r="5.5" fill="none" stroke="#000080" stroke-width="0.8"/><circle cx="30" cy="20" r="1.2" fill="#000080"/></svg> India</div>
+                  <div class="sel-option" data-value="USA"><svg class="flag-icon" viewBox="0 0 60 40"><rect y="0" width="60" height="40" fill="#fff"/><rect y="0" width="60" height="5.71" fill="#b22234"/><rect y="11.43" width="60" height="5.71" fill="#b22234"/><rect y="22.86" width="60" height="5.71" fill="#b22234"/><rect y="34.29" width="60" height="5.71" fill="#b22234"/><rect x="0" y="0" width="24" height="20" fill="#3c3b6e"/></svg> United States</div>
+                  <div class="sel-option" data-value="UAE"><svg class="flag-icon" viewBox="0 0 60 40"><rect x="0" y="0" width="60" height="13.33" fill="#009e49"/><rect x="0" y="13.33" width="60" height="13.33" fill="#fff"/><rect x="0" y="26.66" width="60" height="13.34" fill="#000"/><rect x="0" y="0" width="15" height="40" fill="#ff0000"/></svg> UAE</div>
+                  <div class="sel-option" data-value="UK"><svg class="flag-icon" viewBox="0 0 60 40"><rect y="0" width="60" height="40" fill="#012169"/><rect x="0" y="17" width="60" height="6" fill="#fff"/><rect x="27" y="0" width="6" height="40" fill="#fff"/><rect x="0" y="19" width="60" height="2" fill="#c8102e"/><rect x="28" y="0" width="4" height="40" fill="#c8102e"/></svg> United Kingdom</div>
+                  <div class="sel-option" data-value="Singapore"><svg class="flag-icon" viewBox="0 0 60 40"><rect y="0" width="60" height="20" fill="#ed2939"/><rect y="20" width="60" height="20" fill="#fff"/></svg> Singapore</div>
+                  <div class="sel-option" data-value="Australia"><svg class="flag-icon" viewBox="0 0 60 40"><rect y="0" width="60" height="40" fill="#00008b"/><circle cx="10" cy="10" r="4" fill="#fff"/></svg> Australia</div>
+                  <div class="sel-option" data-value="Canada"><svg class="flag-icon" viewBox="0 0 60 40"><rect y="0" width="60" height="40" fill="#fff"/><rect x="0" y="0" width="14" height="40" fill="#d52b1e"/><rect x="46" y="0" width="14" height="40" fill="#d52b1e"/><polygon points="30,8 33,16 40,16 34,21 37,30 30,25 23,30 26,21 20,16 27,16" fill="#d52b1e"/></svg> Canada</div>
+                  <div class="sel-option" data-value="Maldives"><svg class="flag-icon" viewBox="0 0 60 40"><rect y="0" width="60" height="40" fill="#d21034"/><rect x="10" y="8" width="40" height="24" fill="#007e3a"/></svg> Maldives</div>
+                </div>
+              </div>
+              <div class="sel-box" data-type="currency">
+                <div class="sel-box-header">
+                  <div class="sel-box-left">
+                    <span class="sel-code">INR</span>
+                    <span class="sel-sub">Indian Rupee</span>
+                  </div>
+                  <svg class="sel-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                </div>
+                <div class="sel-options">
+                  <div class="sel-option selected" data-value="INR"><span class="sel-code">INR</span> Indian Rupee</div>
+                  <div class="sel-option" data-value="USD"><span class="sel-code">USD</span> US Dollar</div>
+                  <div class="sel-option" data-value="EUR"><span class="sel-code">EUR</span> Euro</div>
+                  <div class="sel-option" data-value="GBP"><span class="sel-code">GBP</span> British Pound</div>
+                  <div class="sel-option" data-value="AED"><span class="sel-code">AED</span> UAE Dirham</div>
+                  <div class="sel-option" data-value="SGD"><span class="sel-code">SGD</span> Singapore Dollar</div>
+                  <div class="sel-option" data-value="AUD"><span class="sel-code">AUD</span> Australian Dollar</div>
+                  <div class="sel-option" data-value="CAD"><span class="sel-code">CAD</span> Canadian Dollar</div>
+                </div>
+              </div>
+              <div class="sel-box" data-type="language">
+                <div class="sel-box-header">
+                  <div class="sel-box-left">
+                    <span class="sel-code">ENG</span>
+                    <span class="sel-sub">English</span>
+                  </div>
+                  <svg class="sel-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                </div>
+                <div class="sel-options">
+                  <div class="sel-option selected" data-value="ENG"><span class="sel-code">ENG</span> English</div>
+                  <div class="sel-option" data-value="HIN"><span class="sel-code">HIN</span> Hindi</div>
+                  <div class="sel-option" data-value="FRA"><span class="sel-code">FRA</span> French</div>
+                  <div class="sel-option" data-value="SPA"><span class="sel-code">SPA</span> Spanish</div>
+                  <div class="sel-option" data-value="ARA"><span class="sel-code">ARA</span> Arabic</div>
+                  <div class="sel-option" data-value="CHN"><span class="sel-code">CHN</span> Chinese</div>
+                  <div class="sel-option" data-value="GER"><span class="sel-code">GER</span> German</div>
+                  <div class="sel-option" data-value="JPN"><span class="sel-code">JPN</span> Japanese</div>
+                </div>
+              </div>
+              <button class="apply-btn">APPLY</button>
+            </div>
+          </div>
+        </div>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <nav class="service-nav">
+      <div class="container">
+        <div class="service-links d-flex align-items-center gap-0">
+          <a href="#" class="active d-flex align-items-center gap-1 text-decoration-none flex-shrink-0">
+            <svg viewBox="0 0 24 24"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>
+            Flights
+          </a>
+          <a href="#" class="d-flex align-items-center gap-1 text-decoration-none flex-shrink-0">
+            <svg viewBox="0 0 24 24"><path d="M19 9.2V6h-3.2L12 2.4 8.2 6H5v3.2L1.4 13l3.6 3.6V20h3.2l3.8 3.8 3.8-3.8H19v-3.2l3.6-3.6L19 9.2z"/></svg>
+            Hotels
+          </a>
+          <a href="#" class="d-flex align-items-center gap-1 text-decoration-none flex-shrink-0">
+            <svg viewBox="0 0 24 24"><path d="M4 16c0 .88.39 1.67 1 2.22V20c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h8v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1.78c.61-.55 1-1.34 1-2.22V6c0-3.5-3.58-4-8-4s-8 .5-8 4v10zm3.5 1c-.83 0-1.5-.67-1.5-1.5S6.67 14 7.5 14s1.5.67 1.5 1.5S8.33 17 7.5 17zm9 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm1.5-6H6V6h12v5z"/></svg>
+            Buses
+          </a>
+          <a href="#" class="d-flex align-items-center gap-1 text-decoration-none flex-shrink-0">
+            <svg viewBox="0 0 24 24"><path d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 12H4V8h16v10z"/></svg>
+            Holiday Packages
+          </a>
+          <a href="#" class="d-flex align-items-center gap-1 text-decoration-none flex-shrink-0">
+            <svg viewBox="0 0 24 24"><path d="M12 2c-4 0-8 .5-8 4v9.5C4 17.43 5.57 19 7.5 19L6 20.5v.5h12v-.5L16.5 19c1.93 0 3.5-1.57 3.5-3.5V6c0-3.5-4-4-8-4zM7.5 17c-.83 0-1.5-.67-1.5-1.5S6.67 14 7.5 14s1.5.67 1.5 1.5S8.33 17 7.5 17zm3.5-7H6V6h5v4zm5.5 7c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm1.5-7h-5V6h5v4z"/></svg>
+            Trains
+          </a>
+          <a href="#" class="d-flex align-items-center gap-1 text-decoration-none flex-shrink-0">
+            <svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg>
+            Cabs
+          </a>
+          <a href="#" class="d-flex align-items-center gap-1 text-decoration-none flex-shrink-0">
+            <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            Homestays
+          </a>
+          <a href="#" class="d-flex align-items-center gap-1 text-decoration-none flex-shrink-0">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            Attractions
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ----------------- HERO / SEARCH -------------------- -->
+  <section class="hero">
+    <div class="container position-relative" style="z-index:2;">
+      <div class="search-box">
+        <div class="trip-type d-flex align-items-center gap-4 mb-3">
+          <label class="d-flex align-items-center gap-1"><input type="radio" name="trip" checked> One Way</label>
+          <label class="d-flex align-items-center gap-1"><input type="radio" name="trip"> Round Trip</label>
+          <label class="d-flex align-items-center gap-1"><input type="radio" name="trip"> Multi City</label>
+        </div>
+        <div class="row g-3">
+          <div class="field-wrap col position-relative d-flex align-items-start flex-1">
+            <div class="field flex-1">
+              <label class="form-label d-block text-uppercase">From</label>
+              <input type="text" class="form-control" value="Delhi" placeholder="City / Airport">
+            </div>
+            <div class="swap-icon position-absolute">
+              <svg viewBox="0 0 24 24"><path d="M16 17.01V10h-2v7.01h-3L15 21l4-3.99h-3zM9 3L5 6.99h3V14h2V6.99h3L9 3z"/></svg>
+            </div>
+          </div>
+          <div class="field col">
+            <label class="form-label d-block text-uppercase">To</label>
+            <input type="text" class="form-control" placeholder="City / Airport" value="Mumbai">
+          </div>
+          <div class="field col">
+            <label class="form-label d-block text-uppercase">Departure</label>
+            <input type="date" class="form-control" value="2026-06-22">
+          </div>
+          <div class="field col">
+            <label class="form-label d-block text-uppercase">Return</label>
+            <input type="date" class="form-control" placeholder="Select Date">
+          </div>
+          <div class="field col">
+            <label class="form-label d-block text-uppercase">Travellers & Class</label>
+            <select class="form-select">
+              <option>1 Traveller, Economy</option>
+              <option selected>2 Travellers, Economy</option>
+              <option>3 Travellers, Economy</option>
+              <option>1 Traveller, Business</option>
+              <option>2 Travellers, Business</option>
+              <option>3 Travellers, Premium Economy</option>
+            </select>
+          </div>
+          <div class="col d-flex align-items-end">
+            <button class="search-btn btn border-0">SEARCH</button>
+          </div>
+        </div>
+
+        <div class="fare-types d-flex align-items-center gap-3 flex-wrap mt-3 pt-3 border-top">
+          <span class="fare-item d-flex align-items-center gap-1"><input type="checkbox" class="form-check-input"> Regular <span class="info-icon">i</span></span>
+          <span class="fare-item d-flex align-items-center gap-1"><input type="checkbox" class="form-check-input"> Armed Forces <span class="info-icon">i</span></span>
+          <span class="fare-item d-flex align-items-center gap-1"><input type="checkbox" class="form-check-input"> Student <span class="info-icon">i</span></span>
+          <span class="fare-item d-flex align-items-center gap-1"><input type="checkbox" class="form-check-input"> Senior Citizen <span class="info-icon">i</span></span>
+          <span class="fare-item d-flex align-items-center gap-1"><input type="checkbox" class="form-check-input"> Double Seat Fares <span class="info-icon">i</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ******************** OFFERS STRIP ******************* -->
+  <div class="offers-strip">
+    <div class="container d-flex gap-3 justify-content-center">
+      <div class="offer-card d-flex align-items-center gap-2 flex-1">
+        <div class="icon">
+          <svg viewBox="0 0 24 24"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>
+        </div>
+        <div class="info">
+          <h4>Up to &#x20B9;7,500 OFF on Flights</h4>
+          <p>Use code <span class="coupon-code">MMTSUPER</span></p>
+        </div>
+      </div>
+      <div class="offer-card d-flex align-items-center gap-2 flex-1">
+        <div class="icon">
+          <svg viewBox="0 0 24 24"><path d="M19 9.2V6h-3.2L12 2.4 8.2 6H5v3.2L1.4 13l3.6 3.6V20h3.2l3.8 3.8 3.8-3.8H19v-3.2l3.6-3.6L19 9.2z"/></svg>
+        </div>
+        <div class="info">
+          <h4>Up to 50% OFF on Hotels</h4>
+          <p>Use code <span class="coupon-code">MMTHOTEL</span></p>
+        </div>
+      </div>
+      <div class="offer-card d-flex align-items-center gap-2 flex-1">
+        <div class="icon">
+          <svg viewBox="0 0 24 24"><path d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 12H4V8h16v10z"/></svg>
+        </div>
+        <div class="info">
+          <h4>Holiday Packages starting &#x20B9;9,999</h4>
+          <p>Use code <span class="coupon-code">WELCOMEMMT</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ******************** BANK OFFERS SECTION ******************* -->
+  <section class="offers-section" style="background:#f8f8f8;">
+    <div class="container">
+      <div class="section-header d-flex justify-content-between align-items-end mb-3">
+        <div>
+          <h2>Best Offers for You</h2>
+          <p class="subtitle">Unlock exclusive deals from top banks & partners</p>
+        </div>
+        <a href="#" class="view-all text-decoration-none fw-bold">View All Offers &rarr;</a>
+      </div>
+
+      <div class="offers-tabs d-flex gap-1 flex-wrap mb-4">
+        <button class="otab active border-0">All Offers</button>
+        <button class="otab border-0">Bank Offers</button>
+        <button class="otab border-0">Flights</button>
+        <button class="otab border-0">Hotels</button>
+        <button class="otab border-0">Holiday Packages</button>
+      </div>
+
+      <div class="row row-cols-4 g-3">
+        <div class="col">
+          <div class="offer-item">
+            <span class="offer-badge green">ICICI Bank</span>
+            <h4>Up to 10% OFF on Domestic Flights</h4>
+            <p>Min ATV &#x20B9;5,000. Max discount &#x20B9;1,800. Valid until 10th June.</p>
+            <div class="copy-code" data-code="MMTICICIFEST">&#x1F4CB; MMTICICIFEST</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="offer-item">
+            <span class="offer-badge">HDFC Bank</span>
+            <h4>Up to 20% OFF on Flights & Hotels</h4>
+            <p>Via HDFC NetBanking. Min ATV &#x20B9;5,000. Valid till 30th June.</p>
+            <div class="copy-code" data-code="HDFCNBMMT">&#x1F4CB; HDFCNBMMT</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="offer-item">
+            <span class="offer-badge orange">Axis Bank</span>
+            <h4>FLAT 12% OFF on Business Class</h4>
+            <p>On Axis Bank Credit Cards. Max discount &#x20B9;5,000. Limited period.</p>
+            <div class="copy-code" data-code="AXISFLY">&#x1F4CB; AXISFLY</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="offer-item">
+            <span class="offer-badge purple">Super Saver</span>
+            <h4>Up to 10% OFF on All Flights</h4>
+            <p>No minimum spend. Use code for instant discount on domestic sectors.</p>
+            <div class="copy-code" data-code="SUPERSAVER">&#x1F4CB; SUPERSAVER</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="offer-item">
+            <span class="offer-badge blue">SBI Card</span>
+            <h4>Up to 15% OFF on Hotels</h4>
+            <p>Min ATV &#x20B9;4,000. Max discount &#x20B9;5,000. Use SBI Credit Cards.</p>
+            <div class="copy-code" data-code="SBIMMTHOTEL">&#x1F4CB; SBIMMTHOTEL</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="offer-item">
+            <span class="offer-badge green">Kotak Mahindra</span>
+            <h4>Up to &#x20B9;2,500 OFF on Flights</h4>
+            <p>On Kotak Credit Cards. Min ATV &#x20B9;8,000. Valid once per card.</p>
+            <div class="copy-code" data-code="KOTAKFLY">&#x1F4CB; KOTAKFLY</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="offer-item">
+            <span class="offer-badge">EMI Special</span>
+            <h4>Interest-Free EMI on Flights</h4>
+            <p>3 & 6 months no-cost EMI on select banks. Book now, pay later.</p>
+            <div class="copy-code" data-code="EMIMMT">&#x1F4CB; EMIMMT</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="offer-item">
+            <span class="offer-badge orange">Student Fare</span>
+            <h4>FLAT 10% OFF for Students</h4>
+            <p>Valid with verified student ID. Extra baggage allowance included.</p>
+            <div class="copy-code" data-code="STUDENT10">&#x1F4CB; STUDENT10</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ******************* AIRLINE PARTNERS ******************* -->
+  <section class="section airline-partners">
+    <div class="container">
+      <div class="airline-wrapper">
+      <div class="section-header d-flex justify-content-between align-items-end mb-3">
+        <div>
+          <h2>Experience Flying with our Airline Partners</h2>
+          <p class="subtitle">Choose from India's leading airlines for a seamless travel experience</p>
+        </div>
+        <a href="#" class="view-all text-decoration-none fw-bold">View All Airlines &rarr;</a>
+      </div>
+      <div class="row row-cols-8 g-3">
+        <div class="col">
+          <div class="airline-card">
+            <img src="https://imgak.mmtcdn.com/flights/assets/media/dt/common/icons/6E.png?v=14" alt="IndiGo">
+            <h4>IndiGo</h4>
+            <p>India's largest airline</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="airline-card">
+            <img src="https://imgak.mmtcdn.com/flights/assets/media/dt/common/icons/AI.png?v=14" alt="Air India">
+            <h4>Air India</h4>
+            <p>Full-service carrier</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="airline-card">
+            <img src="https://imgak.mmtcdn.com/flights/assets/media/dt/common/icons/SG.png?v=14" alt="SpiceJet">
+            <h4>SpiceJet</h4>
+            <p>Budget-friendly flights</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="airline-card">
+            <img src="https://imgak.mmtcdn.com/flights/assets/media/dt/common/icons/UK.png?v=14" alt="Vistara">
+            <h4>Vistara</h4>
+            <p>Premium experience</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="airline-card">
+            <img src="https://imgak.mmtcdn.com/flights/assets/media/dt/common/icons/G8.png?v=14" alt="Go First">
+            <h4>Go First</h4>
+            <p>Affordable travel</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="airline-card">
+            <img src="https://imgak.mmtcdn.com/flights/assets/media/dt/common/icons/I5.png?v=14" alt="Air India Express">
+            <h4>Air India Express</h4>
+            <p>Budget international</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="airline-card">
+            <img src="https://imgak.mmtcdn.com/flights/assets/media/dt/common/icons/QP.png?v=14" alt="Akasa Air">
+            <h4>Akasa Air</h4>
+            <p>New age flying</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="airline-card">
+            <img src="https://imgak.mmtcdn.com/flights/assets/media/dt/common/icons/QR.png?v=14" alt="Qatar Airways">
+            <h4>Qatar Airways</h4>
+            <p>World's best airline</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- *********************** FLIGHT DEALS ************************* -->
+  <section class="section" style="background:#fff;">
+    <div class="container">
+      <div class="section-header d-flex justify-content-between align-items-end mb-3">
+        <div>
+          <h2>Top Deals on Flights</h2>
+          <p class="subtitle">Handpicked flight deals for you</p>
+        </div>
+        <a href="#" class="view-all text-decoration-none fw-bold">View All &rarr;</a>
+      </div>
+      <div class="row row-cols-4 g-3">
+        <div class="col">
+          <div class="deal-card">
+            <div class="img-wrap">
+              <img src="https://images.openai.com/static-rsc-4/-o-1tZt2Mxlme16fzDdSnGapE3pSiCaOMivAXeXBOfPx57cEtWQPsiWyjo6VL67N04vDrM5qZnssDSAFl5wYSPCF9vWS_SyKt9IKImQll1UA8zb0lIfbg9jhBEDjy18TWPq7L7bwamX03K-64bvnqfIYwxU6lbSeF5fvwV0OBgyv05gHzqxS1EuBf76vwC74?purpose=fullsize" alt="Flight">
+              <div class="tag">FLAT 20% OFF</div>
+            </div>
+            <div class="body p-3">
+              <h3>Pune &#8594; Mumbai</h3>
+              <p class="desc">Non-stop flights starting from</p>
+              <div class="price">&#x20B9;3,299 <small>onwards</small></div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="deal-card">
+            <div class="img-wrap">
+              <img src="https://images.openai.com/static-rsc-4/voF2LQVBhlUlv0RX8MSYLMKKdgzTBMI-4nRhLvK73o5f-yO8QYcBC3-UYdkN2M67lJLKyQa8mdNJiB_XrprcfbA_SKKQKsKONXSjFPRzLubv2i_MLdfwUhxrv_TT7l2GjvoIHlv50GBS-Zh7QFA6KckMq5nlEH5v1NdZM4HHEjE?purpose=inline" alt="Flight">
+              <div class="tag">25% OFF</div>
+            </div>
+            <div class="body p-3">
+              <h3>Mumbai &#8594; Bangalore</h3>
+              <p class="desc">Direct flights from</p>
+              <div class="price">&#x20B9;3,999 <small>onwards</small></div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="deal-card">
+            <div class="img-wrap">
+              <img src="https://assets.hyatt.com/content/dam/hyatt/hyattdam/images/2015/05/07/1206/Hyatt-Place-Pune-Hinjewadi-P009-Exterior-by-Dusk-Portrait.jpg/Hyatt-Place-Pune-Hinjewadi-P009-Exterior-by-Dusk-Portrait.4x3.adapt.1280.960.jpg" alt="Dubai">
+              <div class="tag">30% OFF</div>
+            </div>
+            <div class="body p-3">
+              <h3>Chennai &#8594; Pune</h3>
+              <p class="desc">Direct flights from</p>
+              <div class="price">&#x20B9;14,999 <small>onwards</small></div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="deal-card">
+            <div class="img-wrap">
+              <img src="https://images.openai.com/static-rsc-4/KCzImPgC9RGrFNOw8OpWUECWZ2fBlVIS-IRY7Y7pnTzy-ZncX8B2afOXaZ6Yij57Dmm2egRwNhZHC2Ko_aZEhEjpU3SKzEyBVgNTu07AvWwFO4AWQi_MBGh1FHCoWLpraM9aRnjsWRzpO1LLwzax3ZPm3_HQ-hlkAcsqlvUONkDcIi5Gn38lTksLvQxxIBsB?purpose=fullsize" alt="Bangkok">
+              <div class="tag">SPECIAL FARE</div>
+            </div>
+            <div class="body p-3">
+              <h3>Delhi &#8594; Goa</h3>
+              <p class="desc">Round trip from</p>
+              <div class="price">&#x20B9;9,499 <small>onwards</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ********************* BANNER ****************** -->
+  <div class="banner-strip text-center">
+    <div class="container">
+      <h2>Planning an International Holiday?</h2>
+      <p>Get customised suggestions on destinations and find the cheapest flights!</p>
+      <button class="btn border-0">EXPLORE NOW</button>
+    </div>
+  </div>
+
+  <!-- ************************ HOTEL DEALS ****************** -->
+  <section class="section" style="background:#f8f8f8;">
+    <div class="container">
+      <div class="section-header d-flex justify-content-between align-items-end mb-3">
+        <div>
+          <h2>Top Hotel Deals</h2>
+          <p class="subtitle">Best prices on hotels across India</p>
+        </div>
+        <a href="#" class="view-all text-decoration-none fw-bold">View All &rarr;</a>
+      </div>
+      <div class="row row-cols-4 g-3">
+        <div class="col">
+          <div class="deal-card">
+            <div class="img-wrap">
+              <img src="https://www.holidaymonk.com/wp-content/uploads/2024/01/Coconut-Creek-Resort-South-Goa-1024x701.jpg" alt="Goa">
+              <div class="tag">40% OFF</div>
+            </div>
+            <div class="body p-3">
+              <h3>Goa Resorts</h3>
+              <p class="desc">Beachfront hotels starting from</p>
+              <div class="price">&#x20B9;1,999 <small>per night</small></div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="deal-card">
+            <div class="img-wrap">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLzCBIsM1E2a2TvPJAytm26D18zlQTu4FlsqPljk_M3Q&s=10" alt="Manali">
+              <div class="tag">35% OFF</div>
+            </div>
+            <div class="body p-3">
+              <h3>Manali Hotels</h3>
+              <p class="desc">Nature view stays from</p>
+              <div class="price">&#x20B9;1,499 <small>per night</small></div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="deal-card">
+            <div class="img-wrap">
+              <img src="https://www.oberoihotels.com/-/media/oberoi-hotels/website-images/the-oberoi-udaivilas-udaipur/dining/overview/restaurant-1.jpg?w=836&hash=ac9fe9d3c2f85ad6d4063a98b78d4dd8" alt="Udaipur">
+              <div class="tag">50% OFF</div>
+            </div>
+            <div class="body p-3">
+              <h3>Udaipur Luxury</h3>
+              <p class="desc">Heritage hotels starting from</p>
+              <div class="price">&#x20B9;2,499 <small>per night</small></div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="deal-card">
+            <div class="img-wrap">
+              <img src="https://www.backpackerswanderlust.com/wp-content/uploads/2018/07/DSC_8749.jpg" alt="Kerala">
+              <div class="tag">HOT DEAL</div>
+            </div>
+            <div class="body p-3">
+              <h3>Munnar Resorts</h3>
+              <p class="desc">Hill station stays from</p>
+              <div class="price">&#x20B9;1,799 <small>per night</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <!-- ******************** FOOTER ****************** -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        
+        <div class="col-lg-2 col-md-4">
+          <h4>Product</h4>
+          <ul class="footer-links">
+            <li><a href="#">Flights</a></li>
+            <li><a href="#">Hotels</a></li>
+            <li><a href="#">Buses</a></li>
+            <li><a href="#">Trains</a></li>
+            <li><a href="#">Holiday Packages</a></li>
+            <li><a href="#">Cabs</a></li>
+            <li><a href="#">Homestays</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-4">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-4">
+          <h4>Support</h4>
+          <ul class="footer-links">
+            <li><a href="#">Help Centre</a></li>
+            <li><a href="#">Cancellation</a></li>
+            <li><a href="#">Refund Status</a></li>
+            <li><a href="#">Corporate Travel</a></li>
+            <li><a href="#">Travel Insurance</a></li>
+            <li><a href="#">Feedback</a></li>
+          </ul>
+        </div>
+       
+      </div>
+     
+    </div>
+  </footer>
+
+  <!-- ******************** LOGIN MODAL ****************** -->
+  <div class="modal-overlay" id="loginModal">
+    <div class="modal-card">
+      <button class="modal-close">&times;</button>
+      <div class="modal-header">
+        <h2>Login or Sign Up</h2>
+      </div>
+      <div class="modal-body">
+        <div class="modal-tabs d-flex mb-3">
+          <button class="modal-tab active" data-tab="login">Login</button>
+          <button class="modal-tab" data-tab="signup">Sign Up</button>
+        </div>
+        <form class="login-form" id="loginForm">
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" class="form-control" placeholder="Enter your email" required>
+          </div>
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control" placeholder="Enter your password" required>
+          </div>
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <label class="d-flex align-items-center gap-1"><input type="checkbox"> Remember me</label>
+            <a href="#" class="forgot-link">Forgot Password?</a>
+          </div>
+          <button type="submit" class="modal-submit">Login</button>
+        </form>
+        <form class="signup-form" id="signupForm" style="display:none;">
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" class="form-control" placeholder="Enter your name" required>
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" class="form-control" placeholder="Enter your email" required>
+          </div>
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control" placeholder="Create a password" required>
+          </div>
+          <button type="submit" class="modal-submit">Create Account</button>
+        </form>
+        <div class="modal-divider"><span>OR</span></div>
+        <button class="google-btn"><svg viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg> Continue with Google</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ******************** MOBILE MENU ****************** -->
+  <div class="mobile-menu-overlay" id="mobileMenu">
+    <div class="mobile-menu">
+      <div class="mobile-menu-header">
+        <span class="fw-bold">Menu</span>
+        <button class="mobile-menu-close">&times;</button>
+      </div>
+      <div class="mobile-menu-body">
+        <div class="mobile-menu-section">
+          <h4>Book</h4>
+          <a href="#" class="mobile-menu-link"><svg viewBox="0 0 24 24"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg> Flights</a>
+          <a href="#" class="mobile-menu-link"><svg viewBox="0 0 24 24"><path d="M19 9.2V6h-3.2L12 2.4 8.2 6H5v3.2L1.4 13l3.6 3.6V20h3.2l3.8 3.8 3.8-3.8H19v-3.2l3.6-3.6L19 9.2z"/></svg> Hotels</a>
+          <a href="#" class="mobile-menu-link"><svg viewBox="0 0 24 24"><path d="M4 16c0 .88.39 1.67 1 2.22V20c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h8v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1.78c.61-.55 1-1.34 1-2.22V6c0-3.5-3.58-4-8-4s-8 .5-8 4v10zm3.5 1c-.83 0-1.5-.67-1.5-1.5S6.67 14 7.5 14s1.5.67 1.5 1.5S8.33 17 7.5 17zm9 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm1.5-6H6V6h12v5z"/></svg> Buses</a>
+          <a href="#" class="mobile-menu-link"><svg viewBox="0 0 24 24"><path d="M12 2c-4 0-8 .5-8 4v9.5C4 17.43 5.57 19 7.5 19L6 20.5v.5h12v-.5L16.5 19c1.93 0 3.5-1.57 3.5-3.5V6c0-3.5-4-4-8-4z"/></svg> Trains</a>
+        </div>
+        <div class="mobile-menu-section">
+          <h4>Account</h4>
+          <a href="#" class="mobile-menu-link mobile-login-link"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> Login / Sign Up</a>
+          <a href="#" class="mobile-menu-link"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> My Trips</a>
+          <a href="#" class="mobile-menu-link"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> Wishlist</a>
+        </div>
+        <div class="mobile-menu-section">
+          <h4>More</h4>
+          <a href="#" class="mobile-menu-link"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> List Your Property</a>
+          <a href="#" class="mobile-menu-link"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/></svg> myBiz</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ******************** BACK TO TOP ****************** -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <div class="toast-copy"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
